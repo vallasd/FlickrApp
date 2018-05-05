@@ -14,6 +14,47 @@
 		10BB42CB209E51BE005CA688 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10BB42C9209E51BE005CA688 /* LaunchScreen.storyboard */; };
 		10BB42D6209E51BE005CA688 /* FlickrAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BB42D5209E51BE005CA688 /* FlickrAppTests.swift */; };
 		10BB42E1209E51BE005CA688 /* FlickrAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BB42E0209E51BE005CA688 /* FlickrAppUITests.swift */; };
+		10BB42F4209E51D9005CA688 /* HGView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BB42EF209E51D9005CA688 /* HGView.swift */; };
+		10BB42F5209E51D9005CA688 /* HGAnimatedTrans.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BB42F0209E51D9005CA688 /* HGAnimatedTrans.swift */; };
+		10BB42F6209E51D9005CA688 /* HGTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BB42F1209E51D9005CA688 /* HGTransition.swift */; };
+		10BB42F7209E51D9005CA688 /* HGPresentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BB42F2209E51D9005CA688 /* HGPresentController.swift */; };
+		10BB42F8209E51D9005CA688 /* HGTransDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BB42F3209E51D9005CA688 /* HGTransDelegate.swift */; };
+		10BB4309209E5203005CA688 /* HGOptional.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BB42FA209E5203005CA688 /* HGOptional.swift */; };
+		10BB430A209E5203005CA688 /* HGJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BB42FB209E5203005CA688 /* HGJSON.swift */; };
+		10BB430B209E5203005CA688 /* HGCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BB42FC209E5203005CA688 /* HGCodable.swift */; };
+		10BB430C209E5203005CA688 /* HGReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BB42FE209E5203005CA688 /* HGReport.swift */; };
+		10BB430D209E5203005CA688 /* HGErrorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BB42FF209E5203005CA688 /* HGErrorType.swift */; };
+		10BB430E209E5203005CA688 /* HGError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BB4300209E5203005CA688 /* HGError.swift */; };
+		10BB430F209E5203005CA688 /* HGFunctional.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BB4302209E5203005CA688 /* HGFunctional.swift */; };
+		10BB4310209E5203005CA688 /* HGPagingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BB4304209E5203005CA688 /* HGPagingData.swift */; };
+		10BB4311209E5203005CA688 /* HGResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BB4305209E5203005CA688 /* HGResult.swift */; };
+		10BB4312209E5203005CA688 /* HGRequestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BB4306209E5203005CA688 /* HGRequestData.swift */; };
+		10BB4313209E5203005CA688 /* HGNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BB4307209E5203005CA688 /* HGNetwork.swift */; };
+		10BB4314209E5203005CA688 /* HGString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BB4308209E5203005CA688 /* HGString.swift */; };
+		10BB4330209E5432005CA688 /* NSButton+Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BB4316209E5430005CA688 /* NSButton+Kingfisher.swift */; };
+		10BB4331209E5432005CA688 /* UIButton+Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BB4317209E5430005CA688 /* UIButton+Kingfisher.swift */; };
+		10BB4332209E5432005CA688 /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BB4318209E5430005CA688 /* Filter.swift */; };
+		10BB4334209E5432005CA688 /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BB431A209E5430005CA688 /* ImageDownloader.swift */; };
+		10BB4335209E5432005CA688 /* ImagePrefetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BB431B209E5430005CA688 /* ImagePrefetcher.swift */; };
+		10BB4336209E5432005CA688 /* Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BB431C209E5430005CA688 /* Kingfisher.swift */; };
+		10BB4337209E5432005CA688 /* ImageView+Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BB431D209E5431005CA688 /* ImageView+Kingfisher.swift */; };
+		10BB4338209E5432005CA688 /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BB431E209E5431005CA688 /* Box.swift */; };
+		10BB4339209E5432005CA688 /* ImageProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BB431F209E5431005CA688 /* ImageProcessor.swift */; };
+		10BB433A209E5432005CA688 /* Placeholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BB4321209E5431005CA688 /* Placeholder.swift */; };
+		10BB433B209E5432005CA688 /* String+MD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BB4322209E5431005CA688 /* String+MD5.swift */; };
+		10BB433C209E5432005CA688 /* Indicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BB4323209E5431005CA688 /* Indicator.swift */; };
+		10BB433D209E5432005CA688 /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BB4324209E5431005CA688 /* Resource.swift */; };
+		10BB433E209E5432005CA688 /* CacheSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BB4325209E5431005CA688 /* CacheSerializer.swift */; };
+		10BB433F209E5432005CA688 /* ImageModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BB4326209E5431005CA688 /* ImageModifier.swift */; };
+		10BB4340209E5432005CA688 /* ImageTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BB4327209E5431005CA688 /* ImageTransition.swift */; };
+		10BB4341209E5432005CA688 /* KingfisherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BB4328209E5431005CA688 /* KingfisherManager.swift */; };
+		10BB4342209E5432005CA688 /* RequestModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BB4329209E5431005CA688 /* RequestModifier.swift */; };
+		10BB4343209E5432005CA688 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BB432A209E5431005CA688 /* ImageCache.swift */; };
+		10BB4344209E5432005CA688 /* KingfisherOptionsInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BB432B209E5432005CA688 /* KingfisherOptionsInfo.swift */; };
+		10BB4345209E5432005CA688 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BB432C209E5432005CA688 /* Image.swift */; };
+		10BB4346209E5432005CA688 /* AnimatedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BB432D209E5432005CA688 /* AnimatedImageView.swift */; };
+		10BB4347209E5432005CA688 /* ThreadHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BB432E209E5432005CA688 /* ThreadHelper.swift */; };
+		10BB4348209E5432005CA688 /* FormatIndicatedCacheSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BB432F209E5432005CA688 /* FormatIndicatedCacheSerializer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +88,47 @@
 		10BB42DC209E51BE005CA688 /* FlickrAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlickrAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		10BB42E0209E51BE005CA688 /* FlickrAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrAppUITests.swift; sourceTree = "<group>"; };
 		10BB42E2209E51BE005CA688 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		10BB42EF209E51D9005CA688 /* HGView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HGView.swift; sourceTree = "<group>"; };
+		10BB42F0209E51D9005CA688 /* HGAnimatedTrans.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HGAnimatedTrans.swift; sourceTree = "<group>"; };
+		10BB42F1209E51D9005CA688 /* HGTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HGTransition.swift; sourceTree = "<group>"; };
+		10BB42F2209E51D9005CA688 /* HGPresentController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HGPresentController.swift; sourceTree = "<group>"; };
+		10BB42F3209E51D9005CA688 /* HGTransDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HGTransDelegate.swift; sourceTree = "<group>"; };
+		10BB42FA209E5203005CA688 /* HGOptional.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HGOptional.swift; sourceTree = "<group>"; };
+		10BB42FB209E5203005CA688 /* HGJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HGJSON.swift; sourceTree = "<group>"; };
+		10BB42FC209E5203005CA688 /* HGCodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HGCodable.swift; sourceTree = "<group>"; };
+		10BB42FE209E5203005CA688 /* HGReport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HGReport.swift; sourceTree = "<group>"; };
+		10BB42FF209E5203005CA688 /* HGErrorType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HGErrorType.swift; sourceTree = "<group>"; };
+		10BB4300209E5203005CA688 /* HGError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HGError.swift; sourceTree = "<group>"; };
+		10BB4302209E5203005CA688 /* HGFunctional.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HGFunctional.swift; sourceTree = "<group>"; };
+		10BB4304209E5203005CA688 /* HGPagingData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HGPagingData.swift; sourceTree = "<group>"; };
+		10BB4305209E5203005CA688 /* HGResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HGResult.swift; sourceTree = "<group>"; };
+		10BB4306209E5203005CA688 /* HGRequestData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HGRequestData.swift; sourceTree = "<group>"; };
+		10BB4307209E5203005CA688 /* HGNetwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HGNetwork.swift; sourceTree = "<group>"; };
+		10BB4308209E5203005CA688 /* HGString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HGString.swift; sourceTree = "<group>"; };
+		10BB4316209E5430005CA688 /* NSButton+Kingfisher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSButton+Kingfisher.swift"; sourceTree = "<group>"; };
+		10BB4317209E5430005CA688 /* UIButton+Kingfisher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Kingfisher.swift"; sourceTree = "<group>"; };
+		10BB4318209E5430005CA688 /* Filter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
+		10BB431A209E5430005CA688 /* ImageDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
+		10BB431B209E5430005CA688 /* ImagePrefetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePrefetcher.swift; sourceTree = "<group>"; };
+		10BB431C209E5430005CA688 /* Kingfisher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Kingfisher.swift; sourceTree = "<group>"; };
+		10BB431D209E5431005CA688 /* ImageView+Kingfisher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ImageView+Kingfisher.swift"; sourceTree = "<group>"; };
+		10BB431E209E5431005CA688 /* Box.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Box.swift; sourceTree = "<group>"; };
+		10BB431F209E5431005CA688 /* ImageProcessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageProcessor.swift; sourceTree = "<group>"; };
+		10BB4321209E5431005CA688 /* Placeholder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Placeholder.swift; sourceTree = "<group>"; };
+		10BB4322209E5431005CA688 /* String+MD5.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+MD5.swift"; sourceTree = "<group>"; };
+		10BB4323209E5431005CA688 /* Indicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Indicator.swift; sourceTree = "<group>"; };
+		10BB4324209E5431005CA688 /* Resource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
+		10BB4325209E5431005CA688 /* CacheSerializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CacheSerializer.swift; sourceTree = "<group>"; };
+		10BB4326209E5431005CA688 /* ImageModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageModifier.swift; sourceTree = "<group>"; };
+		10BB4327209E5431005CA688 /* ImageTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageTransition.swift; sourceTree = "<group>"; };
+		10BB4328209E5431005CA688 /* KingfisherManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KingfisherManager.swift; sourceTree = "<group>"; };
+		10BB4329209E5431005CA688 /* RequestModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestModifier.swift; sourceTree = "<group>"; };
+		10BB432A209E5431005CA688 /* ImageCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
+		10BB432B209E5432005CA688 /* KingfisherOptionsInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KingfisherOptionsInfo.swift; sourceTree = "<group>"; };
+		10BB432C209E5432005CA688 /* Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		10BB432D209E5432005CA688 /* AnimatedImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatedImageView.swift; sourceTree = "<group>"; };
+		10BB432E209E5432005CA688 /* ThreadHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThreadHelper.swift; sourceTree = "<group>"; };
+		10BB432F209E5432005CA688 /* FormatIndicatedCacheSerializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormatIndicatedCacheSerializer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +179,12 @@
 		10BB42BF209E51BC005CA688 /* FlickrApp */ = {
 			isa = PBXGroup;
 			children = (
+				10BB4315209E53BD005CA688 /* KingFisher */,
+				10BB42F9209E5203005CA688 /* HGCodable */,
+				10BB4301209E5203005CA688 /* HGFunctional */,
+				10BB4303209E5203005CA688 /* HGNetwork */,
+				10BB42FD209E5203005CA688 /* HGReport */,
+				10BB42EE209E51D9005CA688 /* HGPresent */,
 				10BB42C0209E51BC005CA688 /* AppDelegate.swift */,
 				10BB42C2209E51BC005CA688 /* ViewController.swift */,
 				10BB42C4209E51BC005CA688 /* Main.storyboard */,
@@ -123,6 +211,89 @@
 				10BB42E2209E51BE005CA688 /* Info.plist */,
 			);
 			path = FlickrAppUITests;
+			sourceTree = "<group>";
+		};
+		10BB42EE209E51D9005CA688 /* HGPresent */ = {
+			isa = PBXGroup;
+			children = (
+				10BB42EF209E51D9005CA688 /* HGView.swift */,
+				10BB42F0209E51D9005CA688 /* HGAnimatedTrans.swift */,
+				10BB42F1209E51D9005CA688 /* HGTransition.swift */,
+				10BB42F2209E51D9005CA688 /* HGPresentController.swift */,
+				10BB42F3209E51D9005CA688 /* HGTransDelegate.swift */,
+			);
+			path = HGPresent;
+			sourceTree = "<group>";
+		};
+		10BB42F9209E5203005CA688 /* HGCodable */ = {
+			isa = PBXGroup;
+			children = (
+				10BB42FA209E5203005CA688 /* HGOptional.swift */,
+				10BB42FB209E5203005CA688 /* HGJSON.swift */,
+				10BB42FC209E5203005CA688 /* HGCodable.swift */,
+			);
+			path = HGCodable;
+			sourceTree = "<group>";
+		};
+		10BB42FD209E5203005CA688 /* HGReport */ = {
+			isa = PBXGroup;
+			children = (
+				10BB42FE209E5203005CA688 /* HGReport.swift */,
+				10BB42FF209E5203005CA688 /* HGErrorType.swift */,
+				10BB4300209E5203005CA688 /* HGError.swift */,
+			);
+			path = HGReport;
+			sourceTree = "<group>";
+		};
+		10BB4301209E5203005CA688 /* HGFunctional */ = {
+			isa = PBXGroup;
+			children = (
+				10BB4302209E5203005CA688 /* HGFunctional.swift */,
+			);
+			path = HGFunctional;
+			sourceTree = "<group>";
+		};
+		10BB4303209E5203005CA688 /* HGNetwork */ = {
+			isa = PBXGroup;
+			children = (
+				10BB4304209E5203005CA688 /* HGPagingData.swift */,
+				10BB4305209E5203005CA688 /* HGResult.swift */,
+				10BB4306209E5203005CA688 /* HGRequestData.swift */,
+				10BB4307209E5203005CA688 /* HGNetwork.swift */,
+				10BB4308209E5203005CA688 /* HGString.swift */,
+			);
+			path = HGNetwork;
+			sourceTree = "<group>";
+		};
+		10BB4315209E53BD005CA688 /* KingFisher */ = {
+			isa = PBXGroup;
+			children = (
+				10BB432D209E5432005CA688 /* AnimatedImageView.swift */,
+				10BB431E209E5431005CA688 /* Box.swift */,
+				10BB4325209E5431005CA688 /* CacheSerializer.swift */,
+				10BB4318209E5430005CA688 /* Filter.swift */,
+				10BB432F209E5432005CA688 /* FormatIndicatedCacheSerializer.swift */,
+				10BB432C209E5432005CA688 /* Image.swift */,
+				10BB432A209E5431005CA688 /* ImageCache.swift */,
+				10BB431A209E5430005CA688 /* ImageDownloader.swift */,
+				10BB4326209E5431005CA688 /* ImageModifier.swift */,
+				10BB431B209E5430005CA688 /* ImagePrefetcher.swift */,
+				10BB431F209E5431005CA688 /* ImageProcessor.swift */,
+				10BB4327209E5431005CA688 /* ImageTransition.swift */,
+				10BB431D209E5431005CA688 /* ImageView+Kingfisher.swift */,
+				10BB4323209E5431005CA688 /* Indicator.swift */,
+				10BB431C209E5430005CA688 /* Kingfisher.swift */,
+				10BB4328209E5431005CA688 /* KingfisherManager.swift */,
+				10BB432B209E5432005CA688 /* KingfisherOptionsInfo.swift */,
+				10BB4316209E5430005CA688 /* NSButton+Kingfisher.swift */,
+				10BB4321209E5431005CA688 /* Placeholder.swift */,
+				10BB4329209E5431005CA688 /* RequestModifier.swift */,
+				10BB4324209E5431005CA688 /* Resource.swift */,
+				10BB4322209E5431005CA688 /* String+MD5.swift */,
+				10BB432E209E5432005CA688 /* ThreadHelper.swift */,
+				10BB4317209E5430005CA688 /* UIButton+Kingfisher.swift */,
+			);
+			path = KingFisher;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,8 +427,49 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10BB4338209E5432005CA688 /* Box.swift in Sources */,
+				10BB4342209E5432005CA688 /* RequestModifier.swift in Sources */,
+				10BB4340209E5432005CA688 /* ImageTransition.swift in Sources */,
+				10BB4309209E5203005CA688 /* HGOptional.swift in Sources */,
+				10BB4313209E5203005CA688 /* HGNetwork.swift in Sources */,
+				10BB42F6209E51D9005CA688 /* HGTransition.swift in Sources */,
+				10BB4334209E5432005CA688 /* ImageDownloader.swift in Sources */,
 				10BB42C3209E51BC005CA688 /* ViewController.swift in Sources */,
+				10BB4341209E5432005CA688 /* KingfisherManager.swift in Sources */,
+				10BB4345209E5432005CA688 /* Image.swift in Sources */,
+				10BB430F209E5203005CA688 /* HGFunctional.swift in Sources */,
 				10BB42C1209E51BC005CA688 /* AppDelegate.swift in Sources */,
+				10BB4312209E5203005CA688 /* HGRequestData.swift in Sources */,
+				10BB430A209E5203005CA688 /* HGJSON.swift in Sources */,
+				10BB4314209E5203005CA688 /* HGString.swift in Sources */,
+				10BB4337209E5432005CA688 /* ImageView+Kingfisher.swift in Sources */,
+				10BB42F5209E51D9005CA688 /* HGAnimatedTrans.swift in Sources */,
+				10BB4330209E5432005CA688 /* NSButton+Kingfisher.swift in Sources */,
+				10BB4311209E5203005CA688 /* HGResult.swift in Sources */,
+				10BB4310209E5203005CA688 /* HGPagingData.swift in Sources */,
+				10BB4348209E5432005CA688 /* FormatIndicatedCacheSerializer.swift in Sources */,
+				10BB4332209E5432005CA688 /* Filter.swift in Sources */,
+				10BB4346209E5432005CA688 /* AnimatedImageView.swift in Sources */,
+				10BB433D209E5432005CA688 /* Resource.swift in Sources */,
+				10BB4347209E5432005CA688 /* ThreadHelper.swift in Sources */,
+				10BB4336209E5432005CA688 /* Kingfisher.swift in Sources */,
+				10BB433E209E5432005CA688 /* CacheSerializer.swift in Sources */,
+				10BB433F209E5432005CA688 /* ImageModifier.swift in Sources */,
+				10BB433C209E5432005CA688 /* Indicator.swift in Sources */,
+				10BB433A209E5432005CA688 /* Placeholder.swift in Sources */,
+				10BB4339209E5432005CA688 /* ImageProcessor.swift in Sources */,
+				10BB42F7209E51D9005CA688 /* HGPresentController.swift in Sources */,
+				10BB4343209E5432005CA688 /* ImageCache.swift in Sources */,
+				10BB430E209E5203005CA688 /* HGError.swift in Sources */,
+				10BB430D209E5203005CA688 /* HGErrorType.swift in Sources */,
+				10BB4331209E5432005CA688 /* UIButton+Kingfisher.swift in Sources */,
+				10BB4335209E5432005CA688 /* ImagePrefetcher.swift in Sources */,
+				10BB42F8209E51D9005CA688 /* HGTransDelegate.swift in Sources */,
+				10BB42F4209E51D9005CA688 /* HGView.swift in Sources */,
+				10BB433B209E5432005CA688 /* String+MD5.swift in Sources */,
+				10BB4344209E5432005CA688 /* KingfisherOptionsInfo.swift in Sources */,
+				10BB430B209E5203005CA688 /* HGCodable.swift in Sources */,
+				10BB430C209E5203005CA688 /* HGReport.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -431,7 +643,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3988969QQJ;
+				DEVELOPMENT_TEAM = Z23FUEE9NC;
 				INFOPLIST_FILE = FlickrApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -449,7 +661,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3988969QQJ;
+				DEVELOPMENT_TEAM = Z23FUEE9NC;
 				INFOPLIST_FILE = FlickrApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
