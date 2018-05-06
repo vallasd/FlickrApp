@@ -8,8 +8,17 @@
 
 import Foundation
 
+
+
 /// we are making an external var because creating a date formatter can be expensive if done a lot
 fileprivate var dateFormatter1: DateFormatter = {
+    let formatter = DateFormatter()
+    formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+    return formatter
+}()
+
+
+fileprivate var dateFormatter2: DateFormatter = {
     let formatter = DateFormatter()
     formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
     return formatter
@@ -72,7 +81,7 @@ extension Optional {
         if let string = self as? String { return string }
         return nil
     }
-    
+
     func string(withDefault d: String) -> String {
         if let string = self as? String {
             if string == "" {
@@ -159,6 +168,7 @@ extension Optional {
         if let date = self as? Date { return date }
         if let string = self as? String {
             if let date = dateFormatter1.date(from: string) { return date }
+            if let date = dateFormatter2.date(from: string) { return date }
         }
         return nil
     }

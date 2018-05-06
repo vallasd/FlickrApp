@@ -20,4 +20,12 @@ extension Date {
         return  dateFormatter.string(from: self)
     }
     
+    var complexDate: String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MM-dd-yyyy HH:mm:ss"
+        return  dateFormatter.string(from: self)
+    }
+    
+    
+    
 }

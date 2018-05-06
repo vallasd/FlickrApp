@@ -21,8 +21,8 @@ class FlickrNetwork {
             "method" : "flickr.interestingness.getList",
             "api_key" : apiKey,
             "format" : "json",
-            "nojsoncallback" : "1",
             "extras": "owner_name,date_taken,description",
+            "nojsoncallback" : "1",
             "date" : date.simpleDate,
         ]
         

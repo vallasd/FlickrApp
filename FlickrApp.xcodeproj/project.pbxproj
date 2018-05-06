@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1093C531209F418700CE4E83 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1093C530209F418700CE4E83 /* UIView.swift */; };
 		10BB42C1209E51BC005CA688 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BB42C0209E51BC005CA688 /* AppDelegate.swift */; };
 		10BB42C3209E51BC005CA688 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BB42C2209E51BC005CA688 /* ViewController.swift */; };
 		10BB42C6209E51BC005CA688 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10BB42C4209E51BC005CA688 /* Main.storyboard */; };
@@ -78,6 +79,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1093C530209F418700CE4E83 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		10BB42BD209E51BC005CA688 /* FlickrApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlickrApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10BB42C0209E51BC005CA688 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		10BB42C2209E51BC005CA688 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 		10BB42B4209E51BC005CA688 = {
 			isa = PBXGroup;
 			children = (
+				10BB434A209E54A2005CA688 /* Model */,
 				10BB42BF209E51BC005CA688 /* FlickrApp */,
 				10BB42D4209E51BE005CA688 /* FlickrAppTests */,
 				10BB42DF209E51BE005CA688 /* FlickrAppUITests */,
@@ -186,7 +189,6 @@
 		10BB42BF209E51BC005CA688 /* FlickrApp */ = {
 			isa = PBXGroup;
 			children = (
-				10BB434A209E54A2005CA688 /* Model */,
 				10BB4354209F0602005CA688 /* Cells */,
 				10BB4353209F0504005CA688 /* ViewControllers */,
 				10BB434E209E59E9005CA688 /* Extensions */,
@@ -297,6 +299,7 @@
 			isa = PBXGroup;
 			children = (
 				10BB434F209E5A60005CA688 /* Date.swift */,
+				1093C530209F418700CE4E83 /* UIView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -505,6 +508,7 @@
 				10BB4311209E5203005CA688 /* HGResult.swift in Sources */,
 				10BB4373209F1892005CA688 /* RequestModifier.swift in Sources */,
 				10BB4310209E5203005CA688 /* HGPagingData.swift in Sources */,
+				1093C531209F418700CE4E83 /* UIView.swift in Sources */,
 				10BB42F7209E51D9005CA688 /* HGPresentController.swift in Sources */,
 				10BB4384209F1892005CA688 /* ImagePrefetcher.swift in Sources */,
 				10BB437F209F1892005CA688 /* AnimatedImageView.swift in Sources */,

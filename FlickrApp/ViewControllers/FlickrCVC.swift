@@ -70,8 +70,8 @@ class FlickrCVC: UICollectionViewController, UICollectionViewDelegateFlowLayout 
     /// Sets the transition delegate with view transition settings. (Presentation Controller)
     fileprivate func setTransitionDelegate() {
         
-        let chromeColor = UIColor(displayP3Red: 1.0, green: 1.0, blue: 1.0, alpha: 0.3)
-        let size = UIDevice.current.userInterfaceIdiom == .pad ? HGSize(wFPercent: 0.5, hFPercent: 0.5) : HGSize(wFPercent: 0.8, hFPercent: 0.8)
+        let chromeColor = UIColor(displayP3Red: 0.0, green: 0.0, blue: 0.0, alpha: 0.4)
+        let size = UIDevice.current.userInterfaceIdiom == .pad ? HGSize(wFPercent: 0.55, hFPercent: 0.65) : HGSize(wFPercent: 0.9, hFPercent: 0.8)
         let transitionSize = HGTransitionSize(start: size, displayed: size, end: size)
         let settings = HGTransitionSettings(position: .position(.center),
                                             directionIn: .position(.right),
@@ -91,6 +91,7 @@ class FlickrCVC: UICollectionViewController, UICollectionViewDelegateFlowLayout 
         let sb = UIStoryboard(name: "Main", bundle: nil)
         let vc = sb.instantiateViewController(withIdentifier: "FlickrPhotoVC") as! FlickrPhotoVC
         vc.photo = photos[forRow]
+        vc.shadowAndCorner = true
         vc.modalPresentationStyle = .custom
         vc.transitioningDelegate = transitionDelegate
         present(vc, animated: true, completion: nil)

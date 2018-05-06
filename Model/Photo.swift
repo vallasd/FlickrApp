@@ -29,6 +29,11 @@ struct Photo: HGCodable {
         return URL(string: "https://farm\(farm).staticflickr.com/\(server)/\(id)_\(secret)_q.jpg")
     }
     
+    var imageURL: URL? {
+        return URL(string: "https://farm\(farm).staticflickr.com/\(server)/\(id)_\(secret)_z.jpg")
+    }
+    
+    
     // MARK: - HGCodable
     
     var encode: Any {
@@ -61,7 +66,7 @@ struct Photo: HGCodable {
         let isfamily = dict["isfamily"].bool
         let ownerName = dict["ownername"].string
         let dateTaken = dict["datetaken"].checkDate
-        let description = dict["description"].string(withDefault: "No description provided")
+        let description = dict["description"].dict["_content"].string(withDefault: "Not provided")
         return Photo(id: id,
                      owner: owner,
                      secret: secret,
