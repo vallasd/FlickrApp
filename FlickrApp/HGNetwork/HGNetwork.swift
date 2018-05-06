@@ -17,23 +17,28 @@ class HGNetwork {
     
     // MARK: - Public Functions
     
-    /// Performs a single request for RequestData.  Will attempt to determine PagingData and return this info to the user with array of HGCodable Objects or Error.  If you set PagingData in the RequestData, this function will only make the request for the current page.
+    /// Performs multiple requests based off of PagingData in RequestData.  Will attempt to determine PagingData and return this info to the user with array of HGCodable Objects or Error.  Completion handler will be called for each request called.  If current page is 1, last page is 5 in page data, 1,2,3,4,5 completion times will be called.  If pagingData is nil in RequestData, request will be created without the paging data and run once.
     func performRequest<A: HGCodable>(requestData: RequestData, completion: @escaping (ResultWithPagingData<[A]>) -> ()) {
         
         // If pagingData in requestData is nil, we will make a dummy paging.  Dummy page will not be processed in request.
-        let pagingData = requestData.pagingData != nil ? requestData.pagingData : PagingData()
+        var pagingData = requestData.pagingData != nil ? requestData.pagingData : PagingData()
         
-        let newRequestData = requestData.create(withPagingData: pagingData!)
-        let result: Result<URLRequest> = newRequestData.urlRequest
-        
-        switch result {
-        case let .value(request):
-            performRequest(request: request, completion: { [weak self] (result) in
-                self?.process(result: result, completion: completion)
-            })
-        case let .error(error):
-            let errorResult: ResultWithPagingData<[A]> = ResultWithPagingData(error)
-            completion(errorResult)
+        while pagingData != nil {
+            
+            let newRequestData = requestData.create(withPagingData: pagingData!)
+            let result: Result<URLRequest> = newRequestData.urlRequest
+            
+            switch result {
+            case let .value(request):
+                performRequest(request: request, completion: { [weak self] (result) in
+                    self?.process(result: result, completion: completion)
+                })
+            case let .error(error):
+                let errorResult: ResultWithPagingData<[A]> = ResultWithPagingData(error)
+                completion(errorResult)
+            }
+            
+            pagingData = pagingData?.increment
         }
     }
     
@@ -135,7 +140,7 @@ class HGNetwork {
     /// Attempts to decode JSON into an array of HGCodable Objects.  Returns array objects with optional PagingData or Error.
     fileprivate func parseResult<A: HGCodable>(data: Data?, urlResponse: URLResponse?, error: Error?) -> (ResultWithPagingData<[A]>) {
         let result: Result<[A]> = parseResult(data: data, urlResponse: urlResponse, error: error)
-        let pd = PagingData.pagingData(urlResponse: urlResponse)
+        let pd = PagingData.pagingData(urlResponse: urlResponse) ?? PagingData.pagingData(data: data)
         let resultWithPagingData = ResultWithPagingData(result, pagingData: pd)
         return resultWithPagingData
     }

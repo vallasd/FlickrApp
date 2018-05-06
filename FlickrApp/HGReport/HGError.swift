@@ -6,9 +6,16 @@
 //  Copyright © 2018 David Vallas. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 extension Error {
+    
+    /// Creates a UIAlertController from Error message
+    var alert: UIAlertController {
+        let alert = UIAlertController(title: "\((self as NSError).code)", message: self.localizedDescription, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        return alert
+    }
     
     /// Prints the Error to log in specific format
     func display() {

@@ -11,7 +11,6 @@ import Foundation
 /// Protocol for Coding and Decoding objects.  Different than swifts Codable and Encodable protocol in that an HGCodable object is expected to return itself, not an optional or thrown error.  User is expected to use default values and handle error reporting within the encode and decode functions. (Use HGOptional, to unwrap Primitives with proper error reporting) This Folder is dependent on HGReport.
 protocol HGCodable {
     var encode: Any { get }
-    static var encodeError: Self { get }
     static func decode(object: Any) -> Self
     static func decode(object: Any) -> [Self]
 }

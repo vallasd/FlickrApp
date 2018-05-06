@@ -96,7 +96,7 @@ extension Optional {
     }
     
     var checkInt: Int? {
-        if let int = self as? Int { return int }
+        if let i = self as? Int { return i }
         if let s = self as? String { return Int(s) }
         if let f = self as? Float { return Int(f) }
         if let d = self as? Double { return Int(d) }

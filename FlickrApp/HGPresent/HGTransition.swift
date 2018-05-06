@@ -26,10 +26,8 @@ struct HGTransitionSettings {
     let entireScreen: Bool
     /// Will touching chrome dismiss the presented view controller
     let chromeDismiss: Bool
-    /// The starting, ending, and displayed sizes for the presented viewcontroller on an iPhone device
-    let iphoneSize: HGTransitionSize
-    /// The starting, ending, and displayed sizes for the presented viewcontroller on an iPad device.  If nil, will use iphoneSize settings for iPad.
-    let ipadSize: HGTransitionSize?
+    /// The starting, ending, and displayed sizes for the presented viewcontroller on the device
+    let size: HGTransitionSize
     
     static var standard: HGTransitionSettings {
         let color = UIColor(displayP3Red: 0, green: 0, blue: 1.0, alpha: 0.4)
@@ -43,14 +41,8 @@ struct HGTransitionSettings {
                                             chrome: color,
                                             entireScreen: false,
                                             chromeDismiss: false,
-                                            iphoneSize: transitionSize,
-                                            ipadSize: nil)
+                                            size: transitionSize)
         return settings
-    }
-    
-    var size: HGTransitionSize {
-        let ipad = ipadSize == nil ? iphoneSize : ipadSize!
-        return UIDevice.current.userInterfaceIdiom == .pad ? ipad : iphoneSize
     }
 }
 

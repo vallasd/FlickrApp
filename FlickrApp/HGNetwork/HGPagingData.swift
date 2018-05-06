@@ -93,4 +93,32 @@ struct PagingData {
         
         return nil
     }
+    
+    /// Attempts to create PagingData from a Data file.
+    static func pagingData(data: Data?) -> PagingData? {
+        
+        if let d = data {
+            do {
+                let json = try JSONSerialization.jsonObject(with: d, options: [.allowFragments])
+                if let j = json as? HGDICT {
+                    
+                    // attempt to create paging data (Flickr paging)
+                    if let photos = j["photos"] as? HGDICT {
+                        let current = photos["page"].int
+                        let last = photos["pages"].int
+                        let per = photos["perpage"].int
+                        return PagingData(current: current,
+                                          last: last,
+                                          per: per)
+                    }
+                }
+            } catch {
+                return nil
+            }
+        }
+        
+        return nil
+    }
+    
+    
 }
