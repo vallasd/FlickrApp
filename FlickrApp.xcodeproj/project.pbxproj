@@ -284,7 +284,8 @@
 			children = (
 				10BB4351209EF01F005CA688 /* Photo.swift */,
 			);
-			path = Model;
+			name = Model;
+			path = FlickrApp/Model;
 			sourceTree = "<group>";
 		};
 		10BB434B209E54AA005CA688 /* Network */ = {
