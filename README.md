@@ -5,7 +5,8 @@
 ```
 
 This repo contains swift code for an app that retrieves Flickr interestingness photos 
-from the previous day and presents them in a UICollectionView.  All code was written by me except the KingFisher library which is used for image loading.
+from the previous day and presents them in a UICollectionView.  All code was written by me except 
+the KingFisher library which is used for image loading.
 ```
 
 ## Motivation
