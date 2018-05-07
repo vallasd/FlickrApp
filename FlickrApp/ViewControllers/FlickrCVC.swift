@@ -74,8 +74,8 @@ class FlickrCVC: UICollectionViewController, UICollectionViewDelegateFlowLayout 
                     self?.pages = indexedPages
                 }
                 self?.photos = pd == nil ? result.value : self!.photos + result.value
-                self?.collectionView?.reloadData()
                 self?.collectionView?.refreshControl?.endRefreshing()
+                self?.collectionView?.reloadData()
             case let .error(error):
                 self?.present(error.alert, animated: true, completion: nil)
             }
