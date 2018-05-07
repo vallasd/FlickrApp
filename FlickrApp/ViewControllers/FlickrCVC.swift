@@ -37,7 +37,7 @@ class FlickrCVC: UICollectionViewController, UICollectionViewDelegateFlowLayout 
         
         // If we haven't already, kick off initial photo request.
         if photos.count == 0 {
-            updateModel(withPageData: nil)
+            updateModel(withPageData: nil, completeRefresh: true)
         }
     }
     
@@ -45,24 +45,23 @@ class FlickrCVC: UICollectionViewController, UICollectionViewDelegateFlowLayout 
     
     /// Refreshes the model.  If user is using app at later day, they simply need to pull down to refresh.
     @objc fileprivate func refreshModel() {
-        photos = []
-        pages = nil
-        collectionView?.reloadData()
-        updateModel(withPageData: nil)
+        updateModel(withPageData: nil, completeRefresh: true)
     }
     
     /// Adds more photos if we are 20 photos from reaching the end of current photos in model and there are more pages to download.
     fileprivate func updateModel(forRow: Int) {
         if photos.count - 20 == forRow {
             if let p = pages, p.count > 0 {
-                updateModel(withPageData: p.last)
+                updateModel(withPageData: p.last, completeRefresh: false)
                 pages?.removeLast()
             }
         }
     }
     
     /// Adds photos to photos model, sets pages if it hasn't already been set
-    fileprivate func updateModel(withPageData pd: PagingData?) {
+    fileprivate func updateModel(withPageData pd: PagingData?, completeRefresh: Bool) {
+        
+        if completeRefresh { pages = nil }
         
         FlickrNetwork.shared.getInterestingnessPhotos(date: Date.yesterday, pagingData: pd) { [weak self] (result: ResultWithPagingData<[Photo]>) in
             switch result {
@@ -76,7 +75,7 @@ class FlickrCVC: UICollectionViewController, UICollectionViewDelegateFlowLayout 
                     // update model and reload collectionview
                     self?.pages = indexedPages
                 }
-                self?.photos += result.value
+                self?.photos = completeRefresh == true ? result.value : self!.photos + result.value
                 self?.collectionView?.reloadData()
                 self?.collectionView?.refreshControl?.endRefreshing()
             case let .error(error):
