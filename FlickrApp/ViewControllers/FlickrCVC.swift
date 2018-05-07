@@ -15,6 +15,7 @@ class FlickrCVC: UICollectionViewController, UICollectionViewDelegateFlowLayout 
     
     var photos: [Photo] = []
     var pages: [PagingData]?
+    var lastUpdate: Date?
     
     // MARK: - View Lifecycle
     
@@ -26,9 +27,16 @@ class FlickrCVC: UICollectionViewController, UICollectionViewDelegateFlowLayout 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
+        // If we changed days since last update in app, reset the photos and paging data so we make a fresh update.
+        if let l = lastUpdate, Calendar.current.isDateInToday(l) != true {
+            photos = []
+            pages = nil
+        }
+        
         // If we haven't already, kick off initial photo request.
         if photos.count == 0 {
             updateModel(withPageData: nil)
+            lastUpdate = Date()
         }
     }
     
