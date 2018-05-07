@@ -37,7 +37,7 @@ class FlickrCVC: UICollectionViewController, UICollectionViewDelegateFlowLayout 
         
         // If we haven't already, kick off initial photo request.
         if photos.count == 0 {
-            updateModel(withPageData: nil, completeRefresh: true)
+            updateModel(withPageData: nil)
         }
     }
     
@@ -45,29 +45,27 @@ class FlickrCVC: UICollectionViewController, UICollectionViewDelegateFlowLayout 
     
     /// Refreshes the model.  If user is using app at later day, they simply need to pull down to refresh.
     @objc fileprivate func refreshModel() {
-        updateModel(withPageData: nil, completeRefresh: true)
+        updateModel(withPageData: nil)
     }
     
     /// Adds more photos if we are 20 photos from reaching the end of current photos in model and there are more pages to download.
     fileprivate func updateModel(forRow: Int) {
         if photos.count - 20 == forRow {
             if let p = pages, p.count > 0 {
-                updateModel(withPageData: p.last, completeRefresh: false)
+                updateModel(withPageData: p.last)
                 pages?.removeLast()
             }
         }
     }
     
-    /// Adds photos to photos model, sets pages if it hasn't already been set
-    fileprivate func updateModel(withPageData pd: PagingData?, completeRefresh: Bool) {
-        
-        if completeRefresh { pages = nil }
+    /// Adds photos to photos model, sets pages if it hasn't already been set.  If pagingData is nil, we will assume this is first request and will reset the pages and photos data.
+    fileprivate func updateModel(withPageData pd: PagingData?) {
         
         FlickrNetwork.shared.getInterestingnessPhotos(date: Date.yesterday, pagingData: pd) { [weak self] (result: ResultWithPagingData<[Photo]>) in
             switch result {
             case let .value(result):
                 // if we haven't set the pages yet, we will now.
-                if self?.pages == nil {
+                if pd == nil {
                     // get stack of pages to be downloaded.
                     var indexedPages = result.pagingData?.indexedPages ?? []
                     // indexedPages includes current page.  We just downloaded it, so we remove the page.
@@ -75,7 +73,7 @@ class FlickrCVC: UICollectionViewController, UICollectionViewDelegateFlowLayout 
                     // update model and reload collectionview
                     self?.pages = indexedPages
                 }
-                self?.photos = completeRefresh == true ? result.value : self!.photos + result.value
+                self?.photos = pd == nil ? result.value : self!.photos + result.value
                 self?.collectionView?.reloadData()
                 self?.collectionView?.refreshControl?.endRefreshing()
             case let .error(error):
