@@ -15,32 +15,41 @@ class FlickrCVC: UICollectionViewController, UICollectionViewDelegateFlowLayout 
     
     var photos: [Photo] = []
     var pages: [PagingData]?
-    var lastUpdate: Date?
     
     // MARK: - View Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Set transition delegate
         setTransitionDelegate()
+        
+        // Add refresh control
+        let rc = UIRefreshControl()
+        let title = NSLocalizedString("PullToRefresh", comment: "Pull to refresh")
+        rc.attributedTitle = NSAttributedString(string: title)
+        rc.addTarget(self, action: #selector(refreshModel), for: .primaryActionTriggered)
+        collectionView?.refreshControl = rc
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        // If we changed days since last update in app, reset the photos and paging data so we make a fresh update.
-        if let l = lastUpdate, Calendar.current.isDateInToday(l) != true {
-            photos = []
-            pages = nil
-        }
-        
         // If we haven't already, kick off initial photo request.
         if photos.count == 0 {
             updateModel(withPageData: nil)
-            lastUpdate = Date()
         }
     }
     
     // MARK: - Private Functions
+    
+    /// Refreshes the model.  If user is using app at later day, they simply need to pull down to refresh.
+    @objc fileprivate func refreshModel() {
+        photos = []
+        pages = nil
+        collectionView?.reloadData()
+        updateModel(withPageData: nil)
+    }
     
     /// Adds more photos if we are 20 photos from reaching the end of current photos in model and there are more pages to download.
     fileprivate func updateModel(forRow: Int) {
@@ -69,6 +78,7 @@ class FlickrCVC: UICollectionViewController, UICollectionViewDelegateFlowLayout 
                 }
                 self?.photos += result.value
                 self?.collectionView?.reloadData()
+                self?.collectionView?.refreshControl?.endRefreshing()
             case let .error(error):
                 self?.present(error.alert, animated: true, completion: nil)
             }
